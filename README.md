@@ -281,7 +281,9 @@ engine = create_engine('postgresql://catalog:password@localhost/catalog')
  sys.path.insert(0,"/var/www/catalog/")
 
  from catalog import app as application
- application.secret_key = 'super_secret_key'```
+ application.secret_key = 'super_secret_key'
+```
   * Restart Apache with the following command to apply the changes:
 ```
- sudo service apache2 restart``` 
+ sudo service apache2 restart
+``` 
