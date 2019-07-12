@@ -287,3 +287,38 @@ engine = create_engine('postgresql://catalog:password@localhost/catalog')
 ```
  sudo service apache2 restart
 ``` 
+
+## Appendix
+* Tree structure
+    1. Install tree
+    ```
+    sudo apt-get install tree
+    ```
+    2. Project Folder structure
+    ```
+    /var/www/catalog$ tree -L 2
+	
+    ├── catalog
+    │   ├── catalogitemswithusers.db
+    │   ├── client_secrets.json
+    │   ├── database_setup.py
+    │   ├── setup_database.pyc
+    │   ├── catalogsAndItems.py
+    │   ├── fb_client_secrets.json
+    │   ├── __init__.py
+    │   ├── __init__.pyc
+    │   ├── README.md
+    │   ├── static
+    │   ├── templates
+    ├── catalog.wsgi
+    ```
+
+* If an internal error shows up when you try to access the app,
+  open Apache error log as a reference for debugging:
+  ```
+  $ sudo tail /var/log/apache2/error.log
+  ```
+* Restart server
+  ```
+  sudo service apache2 restart
+  ```
